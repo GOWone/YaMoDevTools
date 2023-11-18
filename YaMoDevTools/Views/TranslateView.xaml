@@ -1,0 +1,217 @@
+﻿<UserControl
+    x:Class="YaMoDevTools.Views.TranslateView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:YaMoDevTools.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    Background="White"
+    mc:Ignorable="d">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <!--  翻译选项栏  -->
+        <StackPanel
+            Grid.Row="0"
+            Margin="5,10,5,10"
+            Orientation="Horizontal">
+            <!--  文字翻译  -->
+            <Border
+                Margin="0"
+                BorderBrush="#B3B3B3"
+                BorderThickness="0.5"
+                CornerRadius="3"
+                MouseLeftButtonUp="btn_ToWordTranslatePage"
+                Style="{StaticResource MouseTriggerStyle}">
+                <StackPanel Orientation="Horizontal">
+                    <Image Margin="5" Source="/Assets/fonttranslate.png" />
+                    <TextBlock
+                        Margin="10,10,10,10"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="13"
+                        Foreground="#FF1967D2"
+                        Text="文 字" />
+                </StackPanel>
+
+            </Border>
+            <!--  图像翻译  -->
+            <Border
+                Margin="30,0,0,0"
+                BorderBrush="#B3B3B3"
+                BorderThickness="0.5"
+                CornerRadius="3"
+                MouseLeftButtonUp="btn_ToImageTranslatePage"
+                Style="{StaticResource MouseTriggerStyle}">
+                <StackPanel Orientation="Horizontal">
+                    <Image Margin="5" Source="/Assets/imgtranslate.png" />
+                    <TextBlock
+                        Margin="10,10,10,10"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="13"
+                        Foreground="#FF1967D2"
+                        Text="图 像" />
+                </StackPanel>
+            </Border>
+            <!--  文档翻译  -->
+            <Border
+                Margin="30,0,0,0"
+                BorderBrush="#B3B3B3"
+                BorderThickness="0.5"
+                CornerRadius="3"
+                MouseLeftButtonUp="btn_ToDocTranslatePage"
+                Style="{StaticResource MouseTriggerStyle}">
+                <StackPanel Orientation="Horizontal">
+                    <Image Margin="5" Source="/Assets/doctranslate.png" />
+                    <TextBlock
+                        Margin="10,10,10,10"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="13"
+                        Foreground="#FF1967D2"
+                        Text="文 档" />
+                </StackPanel>
+            </Border>
+        </StackPanel>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <!--  翻译输入详细选项区域  -->
+            <StackPanel Orientation="Horizontal">
+
+                <!--  翻译输入选项区域  -->
+                <StackPanel Grid.Column="0" Orientation="Horizontal">
+                    <Border Style="{StaticResource MouseTriggerStyle}">
+                        <TextBlock
+                            Margin="5,2,5,2"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            FontSize="13"
+                            Foreground="#686868"
+                            Text="检测语言" />
+                    </Border>
+                    <Border Style="{StaticResource MouseTriggerStyle}">
+                        <TextBlock
+                            Margin="15,2,5,2"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            FontSize="13"
+                            Foreground="#686868"
+                            Text="英 语" />
+                    </Border>
+                    <Border Style="{StaticResource MouseTriggerStyle}">
+                        <TextBlock
+                            Margin="10,2,5,2"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            FontSize="13"
+                            Foreground="#686868"
+                            Text="中 文(简 体)" />
+                    </Border>
+                    <Border Style="{StaticResource MouseTriggerStyle}">
+                        <Image Margin="10,2,5,2" Source="/Assets/downtochooseLan.png" />
+                    </Border>
+                    <Border IsEnabled="False" Style="{StaticResource MouseTriggerStyle}">
+                        <TextBlock
+                            Margin="10,2,5,2"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            FontSize="13"
+                            Foreground="#686868" />
+                    </Border>
+                </StackPanel>
+            </StackPanel>
+            <!--  翻译输入输出语言交换区域  -->
+            <Border Grid.Column="1" Style="{StaticResource MouseTriggerStyle}">
+                <Image Source="/Assets/languageexchange.png" />
+            </Border>
+
+
+            <!--  翻译输出详细选项区域  -->
+            <StackPanel Grid.Column="2" Orientation="Horizontal">
+
+                <Border Style="{StaticResource MouseTriggerStyle}">
+                    <TextBlock
+                        Margin="20,2,5,2"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="13"
+                        Foreground="#686868"
+                        Text="英 语" />
+                </Border>
+                <Border Style="{StaticResource MouseTriggerStyle}">
+                    <TextBlock
+                        Margin="10,2,5,2"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="13"
+                        Foreground="#686868"
+                        Text="中 文(简 体)" />
+                </Border>
+                <Border Style="{StaticResource MouseTriggerStyle}">
+                    <Image Margin="10,2,5,2" Source="/Assets/downtochooseLan.png" />
+                </Border>
+                <Border IsEnabled="False" Style="{StaticResource MouseTriggerStyle}">
+                    <TextBlock
+                        Margin="10,2,5,2"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="13"
+                        Foreground="#686868" />
+                </Border>
+            </StackPanel>
+        </Grid>
+        <!--  翻译区域  -->
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <!--  翻译数据输入区域  -->
+            <Grid Grid.Column="0">
+                <Border
+                    Grid.Row="0"
+                    Margin="5"
+                    Background="WhiteSmoke"
+                    CornerRadius="5">
+                    <ContentControl x:Name="TranslateInputArea" Margin="5" />
+                </Border>
+            </Grid>
+            <!--  翻译数据输出区域  -->
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+
+                <Border
+                    Grid.Row="0"
+                    Margin="5"
+                    Background="WhiteSmoke"
+                    CornerRadius="5">
+                    <TextBox
+                        x:Name="txt_OcrResultOutput"
+                        MinHeight="200"
+                        Margin="5"
+                        AcceptsReturn="True"
+                        BorderThickness="0"
+                        FontSize="14"
+                        TextWrapping="Wrap"
+                        VerticalScrollBarVisibility="Visible" />
+
+                </Border>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>
